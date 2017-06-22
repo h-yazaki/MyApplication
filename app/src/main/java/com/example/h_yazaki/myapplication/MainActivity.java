@@ -15,22 +15,7 @@ public class MainActivity extends Activity {
 
     private String TAG = "TestJson";
 
-//    private static final String jsonData = "{" +
-//            "    datas:[" +
-//            "        {" +
-//            "            name : \"名前1\"," +
-//            "            age : \"年齢1\"" +
-//            "        }," +
-//            "        {" +
-//            "            name : \"名前2\"," +
-//            "            age : \"年齢2\"" +
-//            "        }," +
-//            "        {" +
-//            "            name : \"名前3\"," +
-//            "            age : \"年齢3\"" +
-//            "        }" +
-//            "    ]" +
-//            "}";
+    private final String uri = "http://api.atnd.org/events/?keyword=android&format=json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +29,6 @@ public class MainActivity extends Activity {
 
         testParser2();
     }
-
-    private final String uri = "http://api.atnd.org/events/?keyword=android&format=json";
 
     private void testParser2() {
         AsyncJsonLoader asyncJsonLoader = new AsyncJsonLoader(new AsyncJsonLoader.AsyncCallback() {
@@ -105,6 +88,23 @@ public class MainActivity extends Activity {
         toast.show();
     }
 
+//    private static final String jsonData = "{" +
+//            "    datas:[" +
+//            "        {" +
+//            "            name : \"名前1\"," +
+//            "            age : \"年齢1\"" +
+//            "        }," +
+//            "        {" +
+//            "            name : \"名前2\"," +
+//            "            age : \"年齢2\"" +
+//            "        }," +
+//            "        {" +
+//            "            name : \"名前3\"," +
+//            "            age : \"年齢3\"" +
+//            "        }" +
+//            "    ]" +
+//            "}";
+//
 //    private void testParser() {
 //        JSONObject jsonObject = null;
 //        try {
