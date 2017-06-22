@@ -15,22 +15,22 @@ public class MainActivity extends Activity {
 
     private String TAG = "TestJson";
 
-    private String jsonData = "{" +
-            "    datas:[" +
-            "        {" +
-            "            name : \"名前1\"," +
-            "            age : \"年齢1\"" +
-            "        }," +
-            "        {" +
-            "            name : \"名前2\"," +
-            "            age : \"年齢2\"" +
-            "        }," +
-            "        {" +
-            "            name : \"名前3\"," +
-            "            age : \"年齢3\"" +
-            "        }" +
-            "    ]" +
-            "}";
+//    private static final String jsonData = "{" +
+//            "    datas:[" +
+//            "        {" +
+//            "            name : \"名前1\"," +
+//            "            age : \"年齢1\"" +
+//            "        }," +
+//            "        {" +
+//            "            name : \"名前2\"," +
+//            "            age : \"年齢2\"" +
+//            "        }," +
+//            "        {" +
+//            "            name : \"名前3\"," +
+//            "            age : \"年齢3\"" +
+//            "        }" +
+//            "    ]" +
+//            "}";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,23 +105,23 @@ public class MainActivity extends Activity {
         toast.show();
     }
 
-    private void testParser() {
-        JSONObject jsonObject = null;
-        try {
-            jsonObject = new JSONObject(jsonData);
-            if (jsonObject != null) {
-                JSONArray datas = jsonObject.getJSONArray("datas");
-                for (int i = 0; i < datas.length(); i++) {
-                    JSONObject data = datas.getJSONObject(i);
-                    String name = data.getString("name");
-                    String age = data.getString("age");
-                    Log.d(TAG, "name[" + i + "] = " + name);
-                    Log.d(TAG, "age [" + i + "] = " + age);
-                }
-            }
-        } catch (JSONException e) {
-            Log.d(TAG, "JSONException");
-            e.printStackTrace();
-        }
-    }
+//    private void testParser() {
+//        JSONObject jsonObject = null;
+//        try {
+//            jsonObject = new JSONObject(jsonData);
+//            if (jsonObject != null) {
+//                JSONArray datas = jsonObject.getJSONArray("datas");
+//                for (int i = 0; i < datas.length(); i++) {
+//                    JSONObject data = datas.getJSONObject(i);
+//                    String name = data.getString("name");
+//                    String age = data.getString("age");
+//                    Log.d(TAG, "name[" + i + "] = " + name);
+//                    Log.d(TAG, "age [" + i + "] = " + age);
+//                }
+//            }
+//        } catch (JSONException e) {
+//            Log.d(TAG, "JSONException");
+//            e.printStackTrace();
+//        }
+//    }
 }
